@@ -23,7 +23,8 @@ app.use(express.static("public"));
 // mongoose.connect("mongodb://localhost/packt_db", { useNewUrlParser: true });
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/packt_db";
 
-mongoose.connect("mongodb://heroku_ntzq8k8d:n65ik1cl6malct8e06p80jqt8b@ds213209.mlab.com:13209/heroku_ntzq8k8d");
+// mongoose.connect("mongodb://heroku_ntzq8k8d:n65ik1cl6malct8e06p80jqt8b@ds213209.mlab.com:13209/heroku_ntzq8k8d");
+mongoose.connect(MONGODB_URI);
 
 // Routes
 app.get("/scrape", function (req, res) {
